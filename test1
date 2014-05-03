@@ -1,0 +1,71 @@
+def getOrders(names, egg_order):
+    """
+    Collects order information - name, number of eggs – in a loop
+    """
+    print("Collecting Orders")
+    name = ""
+    while name.upper() != "F":
+        name = input("What is the customer's name? (\"F\" to finish)")
+        if name.upper()!= "F":
+            names.append(name)
+            egg_order.append(read_int("How many eggs does " + name + " wish to order?"))
+
+def showOrders(names, egg_order):
+    """
+    calculates price for each egg order, and displays order information - name, number of eggs, price 
+    """
+    PRICE_PER_DOZEN = 6.5
+    print("Showing orders")
+    for i in range(len(names)):
+        price = PRICE_PER_DOZEN /12 * egg_order[i]
+        #print("{0:} ordered {1:} eggs. The price is ${2:.2f}".format(names[i], egg_order[i], price))
+        #print("{0} ordered {1} eggs. The price is ${2:.2f}".format(names[i], egg_order[i], price))
+        print("{} ordered {} eggs. The price is ${:.2f}".format(names[i], egg_order[i], price))
+
+
+def showReport(egg_order):
+    """
+    displays summary data - total eggs, number of dozens to be ordered, average eggs per customer 
+    """
+    if len(names) == 0:
+        print ("No orders")
+    else:
+        total = 0
+        for eggs in egg_order:
+            total += eggs
+        print ("Summary")
+        print ("Total eggs:" + str(total))
+        print ("Dozens required:" + str(get_dozens(total)));
+        average = 0
+        if len(egg_order) > 0:
+            average = total / len(egg_order)
+        print ("Average number of eggs per customer:{0:.1f}".format(average))
+
+
+def get_dozens (num_eggs):
+    """
+    returns whole number of dozens required to meet required number of eggs
+    """
+    num_dozens = num_eggs//12
+    if num_eggs%12 != 0:
+        num_dozens += 1
+
+    return num_dozens
+
+
+
+def read_int(prompt):
+    choice = -1;
+    while choice == -1:
+        try:
+            choice = int(input(prompt))
+        except ValueError:
+            print ("Not a valid integer")
+    return choice
+
+#main routine
+names = []
+egg_order = []
+getOrders(names, egg_order)
+showOrders(names, egg_order)
+showReport(egg_order)
