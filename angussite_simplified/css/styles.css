@@ -1,0 +1,127 @@
+*** Page Layout ***/
+body {
+  font-family: verdana, arial, sans-serif;
+  font-size: 13px;
+  background-color: gray; 
+  color:blue;
+  /*background-image: url("../images/angusface.jpg") */
+}
+
+div#container {
+  margin: 35px auto; /*top and bottom margins are 35px and left right are auto calculated to be the same */
+  padding: 2px;
+  width: 960px;
+  background-color: #fff;
+  /*border-radius: 15px 15px 15px 15px;   /**rounded corners */
+  /*box-shadow: 0px 0px 25px rgba(0,0,0,0.50); /**shadow effect */
+}
+
+header {
+  padding: 10px 25px;
+  background-color: #f6b91b; /**this colour is over written by linear gradient - if gradient works **/
+  /*background: linear-gradient(top,  #4ba20b 0%,#f6b91b 100%); */
+}
+
+header h1 {
+  color: #fff;
+  font-size: 2.2em;
+  font-family: arial,verdana,sans-serif;
+  /*text-shadow: 2px 2px 3px rgba(0,0,0,0.30); */
+  margin: 0 0 0.2em 0;
+  padding: 0;
+}
+
+header h2 {
+  color: #fff;
+  font-size: 1.2em;
+  font-family: arial,verdana,sans-serif;
+  /*text-shadow: 1px 1px 2px rgba(0,0,0,0.60); */
+  margin: 0;
+  padding: 0;
+}
+
+#clrboth{
+	clear:both;
+}
+
+/** Navigation uses a horozontal list! **/
+nav {
+  margin: 0 0 25px 0;
+  padding: 10px 25px;
+  background-color: Gray;
+  border-style: solid;
+  border-width: 1px 0 0 0;
+  border-color: #fff;
+  overflow: hidden;
+ }
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  float: left;
+}
+
+nav ul li {
+  list-style: none; /* no bullet points or numbers */
+  margin: 0 2.5em 0 0;
+  padding: 0;
+  float: left;
+  font-size: 1.2em;
+}
+
+/**images **/
+ img {
+    display: block;
+    margin-left: 10px;   
+    margin-right: 10px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	float: right;
+    border: 5px solid gray;
+	/* top right bottom left */
+    padding: 15px 15px 15px 15px;
+}
+
+#imgl {
+/* rules to float the image to the left */
+	float:left;
+}
+p{
+    padding: 15px 15px 15px 15px;
+	background-color: #fff;
+}
+
+iframe{
+	 text-align:center;
+}
+
+
+article {
+  margin: 0;
+  padding: 0 20px 20px 20px; /** padding to keep away from edges of container **/
+}
+
+article h1 {
+  margin: 0 0 0.5em 0;
+  padding: 0;
+  font-weight: normal;
+  font-size: 1.8em;
+  font-family: arial,verdana,sans-serif;
+  color: #444;
+}
+
+footer {
+  clear:both;
+  padding: 10px 25px;
+  color: #fff;
+  background-color: #f6b91b; 
+  text-align: center;
+}
+
+
+
+
+
+
+
